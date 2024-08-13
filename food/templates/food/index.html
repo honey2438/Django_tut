@@ -1,3 +1,5 @@
+
+{% extends 'food/base.html'%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
+      {% block content%}
         <ul>
         {% for item in items%}
                 
                 <li>
-                    <a href="{% url 'food:details' item.id%}">
+                    <a href="{% url 'details' item.id%}">
                  {{item.item_name}} - {{item.item_price}}
                 </a>
                 </li>
         {%endfor%}
-            </ul>
+
+        {% endblock %}
        
-    </h1>
 </body>
 </html>
