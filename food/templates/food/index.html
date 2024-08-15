@@ -9,6 +9,11 @@
 </head>
 <body>
     {% block content%}
+    {% for message in messages%}
+    <div class="alert alert-{{message.tags}}">
+        {{message}}
+    </div>
+    {%endfor%}
     <div class="container my-3">
     {%for item in items%}
     
