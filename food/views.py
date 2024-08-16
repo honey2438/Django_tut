@@ -25,7 +25,7 @@ def create_item(request):
     
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('food:index')
     
     return render(request,'food/item-form.html',{'form':form})
 
@@ -35,7 +35,7 @@ def update_item(request,id):
     
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('food:index')
     
     return render(request,'food/item-form.html',{'form':form,'item':item})
 
@@ -44,7 +44,7 @@ def delete_item(request,id):
     
     if request.method=='POST':
         item.delete()
-        return redirect('index')
+        return redirect('food:index')
     
     return render(request,'food/item-delete.html',{'item':item})
         

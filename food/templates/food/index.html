@@ -30,9 +30,9 @@
 
         </div>
         <div class="col-md-2">
-            <a href="{% url 'details' item.id %}"  class="btn btn-success">Details</a>
-            <a href="{% url 'update' item.id %}" class="btn btn-primary">Update</a>
-            <a href="{% url 'delete' item.id %}" class="btn btn-danger">Delete</a>
+            <a href="{% url 'food:details' item.id %}"  class="btn btn-success">Details</a>
+            <a href="{% url 'food:update' item.id %}" class="btn btn-primary">Update</a>
+            <a href="{% url 'food:delete' item.id %}" class="btn btn-danger">Delete</a>
             
 
         </div>
